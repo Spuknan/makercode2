@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Poppins", sans-serif;
+}
+
+p, span, h1, h2, h3, h4, h5, h6 {
+   margin: 0;
+   padding: 0;
+}
+
+$clr-accent: hsl(14, 100%, 55%);
+$clr-accent-hover: hsl(14, 100%, 50%);
+$clr-accent-active: hsl(14, 100%, 45%);
+$clr-fff: #fff;
+$clr-grey-50: #f2f2f2;
+$clr-grey-100: #e6e6e6;
+$clr-grey-200: #cccccc;
+$clr-grey-300: #b3b3b3;
+$clr-grey-400: #999999;
+$clr-grey-500: #7f8080;
+$clr-grey-600: #666666;
+$clr-grey-700: #4d4d4d;
+$clr-grey-800: #333333;
+$clr-grey-900: #1a1a1a;
+$clr-grey-950: #0d0d0d;
+$clr-000: #000;
+
+@import "./components/Navbar/navbar";
+@import "./components/Home/Home";
+@import "./components/Nosotros/Nosotros";
+@import "./components/MakerPlace/MakerPlace";
+@import "./components/Tienda/Tienda";
+@import "./components/Carrito/Carrito";
+@import "./components/CartWidget/CartWidget";
+@import "./components/ItemListContainer/ItemListContainer";

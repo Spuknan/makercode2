@@ -1,0 +1,27 @@
+.Home {
+   height: 100vh;
+   background: $clr-grey-900;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: $clr-grey-100;
+
+   .left {
+      min-width: 220px;
+   }
+
+   .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h1 {
+         font-weight: 700;
+
+         span {
+            color: $clr-accent;
+         }
+      }
+   }
+}

@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+p, span, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background: #333333;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+.navbar .navbar-brand {
+  font-weight: 700;
+  color: #fff;
+}
+.navbar .navbar-nav {
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}
+.navbar li .nav-link {
+  color: #b3b3b3;
+}
+.navbar li .nav-link:hover {
+  color: #cccccc;
+}
+.navbar li .nav-link.active {
+  color: #fff;
+}
+.navbar form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+}
+.navbar form input {
+  height: 30px;
+  background: none;
+  border: none;
+  border: 2px solid hsl(14, 100%, 55%);
+  border-radius: 0;
+  color: #cccccc;
+  box-shadow: none;
+}
+.navbar form input:focus {
+  background: none;
+  color: #fff;
+  border: 2px solid hsl(14, 100%, 55%);
+  box-shadow: none;
+}
+.navbar form button {
+  color: #fff;
+  background: none;
+  border: none;
+  transition: 0.3s ease;
+}
+.navbar form button:hover {
+  color: hsl(14, 100%, 55%);
+}
+
+.Home {
+  height: 100vh;
+  background: #1a1a1a;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e6e6e6;
+}
+.Home .left {
+  min-width: 220px;
+}
+.Home .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Home .right h1 {
+  font-weight: 700;
+}
+.Home .right h1 span {
+  color: hsl(14, 100%, 55%);
+}
+
+.Nosotros {
+  min-height: 100vh;
+  width: 100%;
+  background: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MakerPlace {
+  min-height: 100vh;
+  width: 100%;
+  background: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Tienda {
+  min-height: 100vh;
+  width: 100%;
+  background: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Carrito {
+  min-height: 100vh;
+  width: 100%;
+  background: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=main.css.map */
