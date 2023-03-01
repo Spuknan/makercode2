@@ -1,8 +1,15 @@
-import React from 'react'
+import React from 'react';
+import '../ItemListContainer/ItemListContainer';
+import ItemListContainer from '../ItemListContainer/ItemListContainer';
 
 const Tienda = () => {
    return (
-      <div className='Tienda'>Tienda</div>
+      <div className='Tienda'>
+         <div>
+            Tienda
+         </div>
+      </div>
+
    )
 }
 

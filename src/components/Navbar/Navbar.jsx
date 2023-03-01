@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
    return (
       <nav className="navbar navbar-expand-sm navbar-dark">
-         <div className="container-fluid">
+         <div className="container">
             <Link to={`/`} className="navbar-brand">MakerCode</Link>
             <button className="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                aria-expanded="false" aria-label="Toggle navigation">
@@ -15,7 +15,7 @@ const Navbar = () => {
                <form className="d-flex">
                   <input className="form-control" type="text" />
                   <button className="my-2 my-sm-0" type="submit">
-                     <i class="fa-solid fa-magnifying-glass"></i>
+                     <i className="fa-solid fa-magnifying-glass"></i>
                   </button>
                </form>
                <ul className="navbar-nav me-auto">

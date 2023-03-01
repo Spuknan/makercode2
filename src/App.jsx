@@ -5,7 +5,6 @@ import Carrito from './components/Carrito/Carrito';
 import Nosotros from './components/Nosotros/Nosotros';
 import MakerPlace from './components/MakerPlace/MakerPlace';
 import Tienda from './components/Tienda/Tienda';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import './main.css';
 
 function App() {
