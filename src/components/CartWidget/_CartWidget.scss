@@ -1,0 +1,15 @@
+.widgetContainer {
+   background: $clr-grey-700;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+   padding: 5px 10px;
+   border-radius: 3px;
+
+   button {
+      background: none;
+      border: none;
+      color: $clr-accent;
+   }
+}

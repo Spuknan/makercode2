@@ -1,0 +1,117 @@
+.ItemListWrapper {
+   display: flex;
+   min-height: 100vh;
+   width: 100%;
+   background: $clr-grey-900;
+
+   .ItemListContainer {
+      display: flex;
+      justify-content: center;
+      flex-grow: 1;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 100px 0;
+   
+      .ItemContainer {
+         display: flex;
+         flex-direction: column;
+         width: 200px;
+         gap: 5px;
+         background: $clr-grey-800;
+         color: $clr-fff;
+         border-radius: 3px;
+         overflow: hidden;
+   
+         img {
+            height: 150px;
+            width: 200px;
+            object-fit: cover;
+         }
+   
+         .itemDetails {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            gap: 5px;
+            height: 100%;
+            
+            h2 {
+               font-size: 1rem;
+               font-weight: 600;
+            }
+      
+            p {
+               font-size: 2rem;
+               color: $clr-grey-200;
+            }
+   
+            .detalles {
+               text-decoration: none;
+               color: $clr-accent;
+            }
+         }
+      }
+   }
+}
+
+.detailContainer {
+   width: 100%;
+   height: 100vh;
+   background: $clr-grey-900;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   .mensaje {
+      color: $clr-accent;
+   }
+
+   .detailWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      background: $clr-grey-800;
+      padding: 1rem;
+      border-radius: 3px;
+
+      .detailFoto {
+         img {
+            height: 500px;
+            width: 300px;
+            object-fit: cover;
+            border-radius: 1px;
+         }
+      }
+
+      .detailProducto {
+         display: flex;
+         flex-direction: column;
+         color: $clr-fff;
+
+         .contadorContainer {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 2rem;
+
+            button {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               background: $clr-grey-700;
+               padding: 8px 32px;
+               border: none;
+               color: $clr-fff;
+               font-size: 1rem;
+            }
+
+            .contador {
+               display: flex;
+               gap: 1rem;
+               align-items: center;
+            }
+         }
+      }
+   }
+}

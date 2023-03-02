@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
 
-const CartWidget = () => {
+export const CartWidget = ({ cantidad }) => {
    return (
-      <i className="fa-solid fa-cart-shopping"></i>
-   )
-}
-
-export default CartWidget
+      <div className="widgetContainer">
+         <button>
+            <i className="fa-solid fa-cart-shopping"></i>
+         </button>
+         <p>{cantidad}</p>
+      </div>
+   );
+};

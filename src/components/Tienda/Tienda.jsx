@@ -1,15 +1,11 @@
 import React from 'react';
-import '../ItemListContainer/ItemListContainer';
-import ItemListContainer from '../ItemListContainer/ItemListContainer';
+import data from '../data';
 
 const Tienda = () => {
-   return (
-      <div className='Tienda'>
-         <div>
-            Tienda
-         </div>
-      </div>
+   console.log(data);
 
+   return (
+      <div className='Tienda'>Tienda</div>
    )
 }
 
