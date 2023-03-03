@@ -4,7 +4,8 @@ import data from '../data'
 import { Item } from './Item'
 
 export const ItemListContainer = () => {
-   const { categoria, subcategoria } = useParams()
+
+   const { categoria } = useParams()
    const [productos, setProductos] = useState([])
 
    useEffect(() => {
@@ -16,25 +17,11 @@ export const ItemListContainer = () => {
             } else {
                reject("No hay productos para mostrar")
             }
-         }, 2000)
+         }, 1000)
       })
 
-      const productosSubCategoria = new Promise((resolve, reject) => {
-         setTimeout(() => {
-            if (data.length) {
-               resolve(data.filter(producto => producto.subcategoria === subcategoria))
-            } else {
-               reject("No hay productos para mostrar")
-            }
-         }, 2000)
-      })
 
-      if (subcategoria) {
-         productosSubCategoria
-            .then(res => {
-               setProductos(res)
-            })
-      } else if (categoria) {
+      if (categoria) {
          productosPorCategoria
             .then(res => {
                setProductos(res)
@@ -42,7 +29,7 @@ export const ItemListContainer = () => {
       } else {
          setProductos(data)
       }
-   }, [categoria, subcategoria])
+   }, [categoria])
 
    return (
       productos ?

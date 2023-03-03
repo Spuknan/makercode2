@@ -6,7 +6,7 @@ const data = [
       descripcion: "Figura de dinosaurio impresa en 3D en PLA de alta calidad",
       stock: 10,
       img: "150.png",
-      categoria: "Impresión 3D",
+      categoria: "impresion3d",
       subcategoria: "Figuras"
    },
    {
@@ -16,7 +16,7 @@ const data = [
       descripcion: "Llavero con diseño de calavera impreso en 3D en ABS resistente",
       stock: 25,
       img: "150.png",
-      categoria: "Impresión 3D",
+      categoria: "impresion3d",
       subcategoria: "Llaveros"
    },
    {
@@ -26,7 +26,7 @@ const data = [
       descripcion: "Letrero de madera cortado con láser con el nombre que elijas",
       stock: 5,
       img: "150.png",
-      categoria: "Corte láser",
+      categoria: "cortelaser",
       subcategoria: "Letreros"
    },
    {
@@ -36,7 +36,7 @@ const data = [
       descripcion: "Caja de joyería de madera con un hermoso diseño geométrico cortado con láser",
       stock: 8,
       img: "150.png",
-      categoria: "Corte láser",
+      categoria: "cortelaser",
       subcategoria: "Cajas"
    },
    {
@@ -46,7 +46,7 @@ const data = [
       descripcion: "Vinilo decorativo para pared con un diseño de árbol y pájaros",
       stock: 15,
       img: "150.png",
-      categoria: "Corte de vinilo",
+      categoria: "vinilos",
       subcategoria: "Vinilos decorativos"
    },
    {
@@ -56,7 +56,7 @@ const data = [
       descripcion: "Vinilo para laptop con un diseño de espacio exterior y planetas",
       stock: 20,
       img: "150.png",
-      categoria: "Corte de vinilo",
+      categoria: "vinilos",
       subcategoria: "Vinilos para laptops"
    },
    {
@@ -66,7 +66,7 @@ const data = [
       descripcion: "Soporte para celular en forma de gato impreso en 3D en PLA de alta calidad",
       stock: 30,
       img: "150.png",
-      categoria: "Impresión 3D",
+      categoria: "impresion3d",
       subcategoria: "Soportes para celular"
    },
    {
@@ -76,7 +76,7 @@ const data = [
       descripcion: "Lámpara en forma de luna impresa en 3D con luz LED ajustable",
       stock: 12,
       img: "150.png",
-      categoria: "Impresión 3D",
+      categoria: "impresion3d",
       subcategoria: "Lámparas"
    },
    {
@@ -86,7 +86,7 @@ const data = [
       descripcion: "Reloj de pared en 3D con engranajes móviles impreso en 3D",
       stock: 3,
       img: "150.png",
-      categoria: "Impresión 3D",
+      categoria: "impresion3d",
       subcategoria: "Relojes de pared"
    },
    {
@@ -96,7 +96,7 @@ const data = [
       descripcion: "Figura de Iron Man impresa en 3D en PLA de alta calidad",
       stock: 8,
       img: "150.png",
-      categoria: "Impresión 3D",
+      categoria: "impresion3d",
       subcategoria: "Figuras de superhéroes"
    },
    {
@@ -106,7 +106,7 @@ const data = [
       descripcion: "Juego de ajedrez impreso en 3D con piezas en forma de personajes medievales",
       stock: 5,
       img: "150.png",
-      categoria: "Impresión 3D",
+      categoria: "impresion3d",
       subcategoria: "Juegos de mesa"
    },
    {
@@ -116,7 +116,7 @@ const data = [
       descripcion: "Figura de Pikachu impresa en 3D en PLA de alta calidad",
       stock: 20,
       img: "150.png",
-      categoria: "Impresión 3D",
+      categoria: "impresion3d",
       subcategoria: "Figuras de Pokémon"
    },
 ]

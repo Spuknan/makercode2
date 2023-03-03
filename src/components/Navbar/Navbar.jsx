@@ -28,8 +28,21 @@ const Navbar = () => {
                   <li className="nav-item">
                      <Link to={`/MakerPlace`} className="nav-link">MakerPlace</Link>
                   </li>
-                  <li className="nav-item">
-                     <Link to={`/productos`} className="nav-link">Tienda</Link>
+                  <li className="nav-item dropdown">
+                     <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Tienda
+                     </a>
+                     <ul className="dropdown-menu">
+
+                        <Link to={`/productos`} className="dropdown-item">Todos</Link>
+
+                        <Link to={`/productos/impresion3d`} className="dropdown-item">Impresion 3D</Link>
+
+                        <Link to={`/productos/cortelaser`} className="dropdown-item">Corte laser</Link>
+
+                        <Link to={`/productos/vinilos`} className="dropdown-item">Vinilos</Link>
+
+                     </ul>
                   </li>
                   <li className="nav-item">
                      <Link to={`/Carrito`} className="nav-link">

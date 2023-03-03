@@ -98,6 +98,7 @@ p, span, h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #fff;
 }
 
 .MakerPlace {
@@ -107,6 +108,7 @@ p, span, h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #fff;
 }
 
 .Tienda {
@@ -125,6 +127,7 @@ p, span, h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #fff;
 }
 
 .widgetContainer {
