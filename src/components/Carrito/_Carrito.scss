@@ -7,3 +7,202 @@
    align-items: center;
    color: $clr-fff;
 }
+
+.CartWidget {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 5px;
+   overflow: hidden;
+
+   .iconoCarrito {
+      button {
+         height: 34px;
+         background: $clr-accent;
+         border: none;
+         color: $clr-fff;
+         padding: 2px 10px;
+      }
+   }
+
+   p {
+      display: flex;
+      align-items: center;
+      height: 34px;
+      border: 2px solid $clr-accent;
+      padding: 0px 20px;
+   }
+}
+
+.cartMensaje {
+   height: 100vh;
+   background: $clr-grey-900;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   color: $clr-fff;
+}
+
+.cart {
+   min-height: 100vh;
+   background: $clr-grey-900;
+   display: flex;
+   gap: 2rem;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   color: $clr-fff;
+   padding-top: 8rem;
+
+   .cartContainer {
+      display: flex;
+
+      .cartItemContainer {
+         display: flex;
+         gap: 2rem;
+         overflow: hidden;
+      }
+   }
+}
+
+.cartItem {
+   display: flex;
+   flex-direction: column;
+   width: 300px;   
+
+   .cartItemImg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      height: 250px;
+      width: 300px;
+      border-radius: 15px 15px 0 0;
+
+      img {
+         object-fit: cover;
+      }
+   }
+
+   .itemContent {
+      background: $clr-grey-100;
+      border-radius: 0 0 15px 15px;
+      padding: 1rem;
+      color: $clr-000;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+      height: 250px;
+
+      .itemData {
+         font-weight: 700;
+      }
+
+      .stock {
+         font-size: 0.8rem;
+         color: $clr-grey-500;
+      }
+
+      .restaTodo {
+         border: none;
+         background: $clr-grey-900;
+         width: 100%;
+         margin-top: 1.3rem;
+         height: 35px;
+         border-radius: 5px;
+         color: $clr-grey-400;
+      }
+   }
+}
+
+.totalContainer {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   padding: 0.5rem 4rem;
+   border: 3px solid $clr-accent;
+   border-radius: 15px;
+
+   .totalTitulo {
+      font-weight: 700;
+      font-size: 2rem;
+      text-align: center;
+      color: $clr-accent;
+   }
+
+   .total {
+      font-weight: 800;
+      font-size: 3rem;
+   }
+}
+
+.ordenFormContainer {
+   display: flex;
+   gap: 10px;
+   background: $clr-grey-800;
+   padding: 2rem;
+   border-radius: 15px;
+   margin-bottom: 4rem;
+   
+   .labels {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      color: $clr-grey-400;
+
+      input {
+         width: 600px;
+         border-radius: 3px;
+         border: none;
+         padding: 2px 10px;
+         background: $clr-grey-200;
+      }
+   }
+
+   .ordenBoton {
+      width: 100%;
+      margin-top: 2rem;
+      background: $clr-accent;
+      color: $clr-fff;
+      border: none;
+      border-radius: 5px;
+      padding: 4px;
+      transition: 0.3s ease;
+
+      &:hover {
+         background: $clr-accent-hover;
+      }
+
+      &:active {
+         background: $clr-accent-active;
+      }
+   }
+}
+
+.ordenMensaje {
+   background: $clr-accent;
+   padding: 1rem 4rem;
+   border-radius: 15px;
+   margin-bottom: 4rem;
+   text-align: center;
+
+   .numeroSeguimiento {
+      font-size: 2rem;
+      font-weight: 900;
+   }
+}
+
+.ctaTienda {
+   background: $clr-accent;
+   padding: 2px 15px;
+   border-radius: 5px;
+   margin: 1rem;
+
+   a {
+      text-decoration: none;
+      color: $clr-fff;
+      font-weight: 500;
+   }
+}

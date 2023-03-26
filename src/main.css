@@ -18,53 +18,27 @@ p, span, h1, h2, h3, h4, h5, h6 {
   width: 100%;
   z-index: 999;
 }
+.navbar .navbar-collapse {
+  display: flex;
+}
 .navbar .navbar-brand {
   font-weight: 700;
   color: #fff;
 }
 .navbar .navbar-nav {
+  display: flex;
   width: 100%;
-  justify-content: flex-end;
+  justify-content: end;
   align-items: center;
 }
 .navbar li .nav-link {
-  color: #b3b3b3;
+  color: #e6e6e6;
 }
 .navbar li .nav-link:hover {
   color: #cccccc;
 }
 .navbar li .nav-link.active {
   color: #fff;
-}
-.navbar form {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 0;
-}
-.navbar form input {
-  height: 30px;
-  background: none;
-  border: none;
-  border: 2px solid hsl(14, 100%, 55%);
-  border-radius: 0;
-  color: #cccccc;
-  box-shadow: none;
-}
-.navbar form input:focus {
-  background: none;
-  color: #fff;
-  border: 2px solid hsl(14, 100%, 55%);
-  box-shadow: none;
-}
-.navbar form button {
-  color: #fff;
-  background: none;
-  border: none;
-  transition: 0.3s ease;
-}
-.navbar form button:hover {
-  color: hsl(14, 100%, 55%);
 }
 
 .Home {
@@ -111,15 +85,6 @@ p, span, h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-.Tienda {
-  min-height: 100vh;
-  width: 100%;
-  background: #1a1a1a;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .Carrito {
   min-height: 100vh;
   width: 100%;
@@ -130,121 +95,388 @@ p, span, h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-.widgetContainer {
-  background: #4d4d4d;
+.CartWidget {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 5px 10px;
-  border-radius: 3px;
-}
-.widgetContainer button {
-  background: none;
-  border: none;
-  color: hsl(14, 100%, 55%);
-}
-
-.ItemListWrapper {
-  display: flex;
-  min-height: 100vh;
-  width: 100%;
-  background: #1a1a1a;
-}
-.ItemListWrapper .ItemListContainer {
-  display: flex;
-  justify-content: center;
-  flex-grow: 1;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 100px 0;
-}
-.ItemListWrapper .ItemListContainer .ItemContainer {
-  display: flex;
-  flex-direction: column;
-  width: 200px;
-  gap: 5px;
-  background: #333333;
-  color: #fff;
-  border-radius: 3px;
+  border-radius: 5px;
   overflow: hidden;
 }
-.ItemListWrapper .ItemListContainer .ItemContainer img {
-  height: 150px;
-  width: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
+.CartWidget .iconoCarrito button {
+  height: 34px;
+  background: hsl(14, 100%, 55%);
+  border: none;
+  color: #fff;
+  padding: 2px 10px;
 }
-.ItemListWrapper .ItemListContainer .ItemContainer .itemDetails {
+.CartWidget p {
   display: flex;
-  flex-direction: column;
-  padding: 10px;
-  gap: 5px;
-  height: 100%;
-}
-.ItemListWrapper .ItemListContainer .ItemContainer .itemDetails h2 {
-  font-size: 1rem;
-  font-weight: 600;
-}
-.ItemListWrapper .ItemListContainer .ItemContainer .itemDetails p {
-  font-size: 2rem;
-  color: #cccccc;
-}
-.ItemListWrapper .ItemListContainer .ItemContainer .itemDetails .detalles {
-  text-decoration: none;
-  color: hsl(14, 100%, 55%);
+  align-items: center;
+  height: 34px;
+  border: 2px solid hsl(14, 100%, 55%);
+  padding: 0px 20px;
 }
 
-.detailContainer {
-  width: 100%;
+.cartMensaje {
   height: 100vh;
   background: #1a1a1a;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #fff;
 }
-.detailContainer .mensaje {
-  color: hsl(14, 100%, 55%);
-}
-.detailContainer .detailWrapper {
+
+.cart {
+  min-height: 100vh;
+  background: #1a1a1a;
   display: flex;
-  align-items: center;
+  gap: 2rem;
+  flex-direction: column;
   justify-content: center;
-  gap: 1rem;
-  background: #333333;
-  padding: 1rem;
-  border-radius: 3px;
+  align-items: center;
+  color: #fff;
+  padding-top: 8rem;
 }
-.detailContainer .detailWrapper .detailFoto img {
-  height: 500px;
-  width: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 1px;
+.cart .cartContainer {
+  display: flex;
 }
-.detailContainer .detailWrapper .detailProducto {
+.cart .cartContainer .cartItemContainer {
+  display: flex;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+.cartItem {
   display: flex;
   flex-direction: column;
-  color: #fff;
+  width: 300px;
 }
-.detailContainer .detailWrapper .detailProducto .contadorContainer {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  font-size: 2rem;
-}
-.detailContainer .detailWrapper .detailProducto .contadorContainer button {
+.cartItem .cartItemImg {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #4d4d4d;
-  padding: 8px 32px;
-  border: none;
-  color: #fff;
-  font-size: 1rem;
+  overflow: hidden;
+  height: 250px;
+  width: 300px;
+  border-radius: 15px 15px 0 0;
 }
-.detailContainer .detailWrapper .detailProducto .contadorContainer .contador {
+.cartItem .cartItemImg img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cartItem .itemContent {
+  background: #e6e6e6;
+  border-radius: 0 0 15px 15px;
+  padding: 1rem;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  height: 250px;
+}
+.cartItem .itemContent .itemData {
+  font-weight: 700;
+}
+.cartItem .itemContent .stock {
+  font-size: 0.8rem;
+  color: #7f8080;
+}
+.cartItem .itemContent .restaTodo {
+  border: none;
+  background: #1a1a1a;
+  width: 100%;
+  margin-top: 1.3rem;
+  height: 35px;
+  border-radius: 5px;
+  color: #999999;
+}
+
+.totalContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0.5rem 4rem;
+  border: 3px solid hsl(14, 100%, 55%);
+  border-radius: 15px;
+}
+.totalContainer .totalTitulo {
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  color: hsl(14, 100%, 55%);
+}
+.totalContainer .total {
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+.ordenFormContainer {
+  display: flex;
+  gap: 10px;
+  background: #333333;
+  padding: 2rem;
+  border-radius: 15px;
+  margin-bottom: 4rem;
+}
+.ordenFormContainer .labels {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #999999;
+}
+.ordenFormContainer .labels input {
+  width: 600px;
+  border-radius: 3px;
+  border: none;
+  padding: 2px 10px;
+  background: #cccccc;
+}
+.ordenFormContainer .ordenBoton {
+  width: 100%;
+  margin-top: 2rem;
+  background: hsl(14, 100%, 55%);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 4px;
+  transition: 0.3s ease;
+}
+.ordenFormContainer .ordenBoton:hover {
+  background: hsl(14, 100%, 60%);
+}
+.ordenFormContainer .ordenBoton:active {
+  background: hsl(14, 100%, 45%);
+}
+
+.ordenMensaje {
+  background: hsl(14, 100%, 55%);
+  padding: 1rem 4rem;
+  border-radius: 15px;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+.ordenMensaje .numeroSeguimiento {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.ctaTienda {
+  background: hsl(14, 100%, 55%);
+  padding: 2px 15px;
+  border-radius: 5px;
+  margin: 1rem;
+}
+.ctaTienda a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+.itemList {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 120px 120px;
+  align-items: center;
+  min-height: 100vh;
+  background: #1a1a1a;
+  gap: 30px;
+}
+.itemList .productCard {
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 300px;
+  height: 500px;
+  background: #e6e6e6;
+  box-shadow: 5px 5px 15px #000;
+}
+.itemList .productCard .cardFoto {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.itemList .productCard .detail {
+  background: #e6e6e6;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+  justify-content: space-between;
+}
+.itemList .productCard .detail .name {
+  font-weight: 700;
+  color: #333333;
+}
+.itemList .productCard .detail .cat {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  background: #cccccc;
+  border-radius: 5px;
+  padding: 5px;
+}
+.itemList .productCard .detail .categoria {
+  font-size: 0.8rem;
+}
+.itemList .productCard .detail .subcategoria {
+  font-size: 0.8rem;
+  color: #999999;
+}
+.itemList .productCard .detail .price {
+  text-align: center;
+  font-weight: 700;
+  color: hsl(14, 100%, 55%);
+  text-shadow: 4px 4px 5px #b3b3b3;
+  font-size: 3rem;
+}
+.itemList .productCard .detail .detalles {
+  background: hsl(14, 100%, 55%);
+  border-radius: 5px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.itemList .productCard .detail .detalles:hover {
+  background: hsl(14, 100%, 60%);
+}
+.itemList .productCard .detail .detalles:active {
+  background: hsl(14, 100%, 45%);
+}
+
+.detailContainer {
+  background: #1a1a1a;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.detailContainer .itemCard {
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  overflow: hidden;
+  max-width: 50vw;
+  background: #e6e6e6;
+  padding: 1rem;
+}
+.detailContainer .itemCard .detailFoto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 300px;
+  max-height: 300px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.detailContainer .itemCard .detailFoto img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.detailContainer .itemCard .detailDescripcion {
+  line-height: auto;
+}
+.detailContainer .itemCard .detailProducto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  color: #1a1a1a;
+  background: #e6e6e6;
+  gap: 1rem;
+}
+.detailContainer .itemCard .detailProducto .stock {
+  font-size: 0.8rem;
+  color: #7f8080;
+}
+.detailContainer .itemCard .detailProducto .detailTitulo {
+  font-weight: 700;
+  font-size: 2rem;
+}
+.detailContainer .itemCard .detailProducto .detailPrecio {
+  font-weight: 600;
+  font-size: 2rem;
+}
+.detailContainer .itemCard .detailProducto .continuarContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.detailContainer .itemCard .detailProducto .continuarContainer p {
+  color: hsl(14, 100%, 55%);
+}
+.detailContainer .itemCard .detailProducto .continuarContainer .botonBolsa a {
+  background: hsl(14, 100%, 55%);
+  border-radius: 5px;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #fff;
+}
+.detailContainer .itemCard .detailProducto .continuarContainer .botonSeguir a {
+  text-decoration: none;
+  color: #1a1a1a;
+  border: 2px solid hsl(14, 100%, 55%);
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.detailContainer .itemCard .detailProducto .agregar {
+  background: hsl(14, 100%, 55%);
+  border: none;
+  border-radius: 5px;
+  padding: 2px 12px;
+  color: #fff;
+}
+
+.contadorContainer {
+  display: flex;
+  gap: 2rem;
+}
+.contadorContainer .contador {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.contadorContainer .contador button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 12px;
+  background: #4d4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+.contadorContainer .contador button.disabled {
+  background: #7f8080;
+}
+
+.messageContainer {
   display: flex;
   gap: 1rem;
+  flex-direction: column;
+  height: 100vh;
+  background: #1a1a1a;
+  color: #fff;
+  justify-content: center;
   align-items: center;
+}
+
+.loaderContainer {
+  height: 100vh;
+  width: 100%;
+  background: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
 }/*# sourceMappingURL=main.css.map */

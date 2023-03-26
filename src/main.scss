@@ -13,7 +13,7 @@ p, span, h1, h2, h3, h4, h5, h6 {
 }
 
 $clr-accent: hsl(14, 100%, 55%);
-$clr-accent-hover: hsl(14, 100%, 50%);
+$clr-accent-hover: hsl(14, 100%, 60%);
 $clr-accent-active: hsl(14, 100%, 45%);
 $clr-fff: #fff;
 $clr-grey-50: #f2f2f2;
@@ -33,7 +33,6 @@ $clr-000: #000;
 @import "./components/Home/Home";
 @import "./components/Nosotros/Nosotros";
 @import "./components/MakerPlace/MakerPlace";
-@import "./components/Tienda/Tienda";
 @import "./components/Carrito/Carrito";
-@import "./components/CartWidget/CartWidget";
 @import "./components/Item/Item";
+@import "./components/Loader/Loader";

@@ -1,8 +1,12 @@
-import React from 'react';
-import { CartWidget } from '../CartWidget/CartWidget';
+import React, { useContext } from 'react';
+import { CartWidget } from '../Carrito/CartWidget';
+import { CartContext } from '../context/CartContext';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+
+   const { cantidadProductos } = useContext(CartContext)
+
    return (
       <nav className="navbar navbar-expand-sm navbar-dark">
          <div className="container">
@@ -12,15 +16,9 @@ const Navbar = () => {
                <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse container-fluid" id="collapsibleNavId">
-               <form className="d-flex">
-                  <input className="form-control" type="text" />
-                  <button className="my-2 my-sm-0" type="submit">
-                     <i className="fa-solid fa-magnifying-glass"></i>
-                  </button>
-               </form>
                <ul className="navbar-nav me-auto">
                   <li className="nav-item">
-                     <Link to={`/`} className="nav-link active">Inicio</Link>
+                     <Link to={`/`} className="nav-link">Inicio</Link>
                   </li>
                   <li className="nav-item">
                      <Link to={`/Nosotros`} className="nav-link">Nosotros</Link>
@@ -45,8 +43,8 @@ const Navbar = () => {
                      </ul>
                   </li>
                   <li className="nav-item">
-                     <Link to={`/Carrito`} className="nav-link">
-                        <CartWidget cantidad={10} />
+                     <Link to={`/carrito`} className="nav-link">
+                        <CartWidget cantidad={cantidadProductos()} />
                      </Link>
                   </li>
                </ul>

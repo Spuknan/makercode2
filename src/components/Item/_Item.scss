@@ -1,53 +1,88 @@
-.ItemListWrapper {
+.itemList {
    display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   padding: 120px 120px;
+   align-items: center;
    min-height: 100vh;
-   width: 100%;
    background: $clr-grey-900;
+   gap: 30px;
 
-   .ItemListContainer {
+   .productCard {
+      border-radius: 15px;
       display: flex;
-      justify-content: center;
-      flex-grow: 1;
-      flex-wrap: wrap;
-      gap: 1rem;
-      padding: 100px 0;
-   
-      .ItemContainer {
+      flex-direction: column;
+      overflow: hidden;
+      width: 300px;
+      height: 500px;
+      background: $clr-grey-100;
+      box-shadow: 5px 5px 15px $clr-000;
+
+      .cardFoto {
+         height: 200px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+
+      }
+
+      .detail {
+         background: $clr-grey-100;
+         padding: 1.5rem;
          display: flex;
          flex-direction: column;
-         width: 200px;
-         gap: 5px;
-         background: $clr-grey-800;
-         color: $clr-fff;
-         border-radius: 3px;
-         overflow: hidden;
-   
-         img {
-            height: 150px;
-            width: 200px;
-            object-fit: cover;
+         gap: 1rem;
+         height: 100%;
+         justify-content: space-between;
+
+         .name {
+            font-weight: 700;
+            color: $clr-grey-800;
          }
-   
-         .itemDetails {
+
+         .cat {
             display: flex;
             flex-direction: column;
-            padding: 10px;
-            gap: 5px;
-            height: 100%;
-            
-            h2 {
-               font-size: 1rem;
-               font-weight: 600;
+            margin-top: 5px;
+            background: $clr-grey-200;
+            border-radius: 5px;
+            padding: 5px;
+         }
+
+         .categoria {
+            font-size: 0.8rem;
+         }
+
+         .subcategoria {
+            font-size: 0.8rem;
+            color: $clr-grey-400;
+         }
+
+         .price {
+            text-align: center;
+            font-weight: 700;
+            color: $clr-accent;
+            text-shadow: 4px 4px 5px $clr-grey-300;
+            font-size: 3rem;
+         }
+
+         .detalles {
+            background: $clr-accent;
+            border-radius: 5px;
+            padding: 8px;
+            display: flex;
+            justify-content: center;
+            color: $clr-000;
+            font-weight: 500;
+            text-decoration: none;
+            transition: 0.3s ease;
+
+            &:hover {
+               background: $clr-accent-hover;
             }
-      
-            p {
-               font-size: 2rem;
-               color: $clr-grey-200;
-            }
-   
-            .detalles {
-               text-decoration: none;
-               color: $clr-accent;
+
+            &:active {
+               background: $clr-accent-active;
             }
          }
       }
@@ -55,63 +90,139 @@
 }
 
 .detailContainer {
-   width: 100%;
-   height: 100vh;
    background: $clr-grey-900;
+   min-height: 100vh;
    display: flex;
    justify-content: center;
    align-items: center;
 
-   .mensaje {
-      color: $clr-accent;
-   }
-
-   .detailWrapper {
+   .itemCard {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      background: $clr-grey-800;
+      border-radius: 15px;
+      overflow: hidden;
+      max-width: 50vw;
+      background: $clr-grey-100;
       padding: 1rem;
-      border-radius: 3px;
 
       .detailFoto {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         max-width: 300px;
+         max-height: 300px;
+         overflow: hidden;
+         border-radius: 5px;
+
          img {
-            height: 500px;
-            width: 300px;
             object-fit: cover;
-            border-radius: 1px;
          }
+      }
+
+      .detailDescripcion {
+         line-height: auto;
       }
 
       .detailProducto {
          display: flex;
          flex-direction: column;
-         color: $clr-fff;
+         justify-content: space-between;
+         padding: 1rem;
+         color: $clr-grey-900;
+         background: $clr-grey-100;
+         gap: 1rem;
 
-         .contadorContainer {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
+         .stock {
+            font-size: 0.8rem;
+            color: $clr-grey-500;
+         }
+
+         .detailTitulo {
+            font-weight: 700;
             font-size: 2rem;
+         }
 
-            button {
-               display: flex;
-               justify-content: center;
-               align-items: center;
-               background: $clr-grey-700;
-               padding: 8px 32px;
-               border: none;
-               color: $clr-fff;
-               font-size: 1rem;
+         .detailPrecio {
+            font-weight: 600;
+            font-size: 2rem;
+         }
+
+         .continuarContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            p {
+               color: $clr-accent;
             }
 
-            .contador {
-               display: flex;
-               gap: 1rem;
-               align-items: center;
+            .botonBolsa {
+               a {
+                  background: $clr-accent;
+                  border-radius: 5px;
+                  padding: 5px 10px;
+                  text-decoration: none;
+                  color: $clr-fff;
+               }
             }
+
+            .botonSeguir {
+               a {
+                  text-decoration: none;
+                  color: $clr-grey-900;
+                  border: 2px solid $clr-accent;
+                  border-radius: 5px;
+                  padding: 5px 10px;
+               }
+            }
+         }
+
+         .agregar {
+            background: $clr-accent;
+            border: none;
+            border-radius: 5px;
+            padding: 2px 12px;
+            color: $clr-fff;
+
          }
       }
    }
+}
+
+.contadorContainer {
+   display: flex;
+   gap: 2rem;
+
+   .contador {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      button {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         padding: 2px 12px;
+         background: $clr-grey-700;
+         color: $clr-fff;
+         border: none;
+         border-radius: 5px;
+         transition: 0.3s ease;
+
+         &.disabled {
+            background: $clr-grey-500;
+         }
+      }
+   }
+}
+
+.messageContainer {
+   display: flex;
+   gap: 1rem;
+   flex-direction: column;
+   height: 100vh;
+   background: $clr-grey-900;
+   color: $clr-fff;
+   justify-content: center;
+   align-items: center;
 }

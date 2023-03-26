@@ -1,28 +1,41 @@
 import React, { useState } from 'react'
 
-export const ItemCount = ({ stock }) => {
+export const ItemCount = ({ initial, stock, onAdd, agregar, onCantidad }) => {
 
-   const [cantidad, setCantidad] = useState(1)
+   const [cantidad, setCantidad] = useState(initial)
 
    return (
       stock ?
          <div className='contadorContainer'>
             <div className='contador'>
-               <button className='resta' onClick={() => cantidad > 1 ? setCantidad(cantidad - 1) : cantidad}>
+               <button className={cantidad === 1 ? 'disabled' : 'resta'} onClick={() => {
+                  const nuevaCantidad = cantidad - 1
+                  setCantidad(cantidad - 1)
+                  onCantidad &&
+                     onCantidad(nuevaCantidad)
+               }} disabled={cantidad === 1}>
                   -
                </button>
                <div>
-                  {cantidad}
+                  <p>{cantidad}</p>
                </div>
-               <button className='suma' onClick={() => cantidad < stock ? setCantidad(cantidad + 1) : cantidad}>
+               <button className={stock === cantidad ? 'disabled' : 'suma'} onClick={() => {
+                  const nuevaCantidad = cantidad + 1
+                  setCantidad(cantidad + 1)
+                  onCantidad &&
+                     onCantidad(nuevaCantidad)
+               }} disabled={cantidad === stock}>
                   +
                </button>
             </div>
-            <div>
-               <button className='agregar'>Agregar</button>
-            </div>
+            {agregar &&
+               <div>
+                  <button className='agregar' onClick={() => onAdd(cantidad)}>Agregar</button>
+               </div>
+            }
          </div>
          :
+
          <div className='agotado'>
             <p>Agotado</p>
          </div>
